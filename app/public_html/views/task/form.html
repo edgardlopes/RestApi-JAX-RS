@@ -1,0 +1,19 @@
+<form>
+    <div class="alert" ng-class="alertClass" ng-show="showAlert">
+        {{msg.msg}}
+    </div>
+
+    <input type="text" ng-model="task.name" class="form-control" placeholder="Nome">
+    <br>
+    <div class="checkbox">
+	    <label>
+	    	<input type="checkbox" ng-model='task.done'> Concluida
+	    </label>
+	</div>
+
+    <div class="btn-group pull-right">
+        <a ng-href="#/usuario/{{user.id}}/tasks" class="btn btn-default">Voltar</a>
+        <button type="button" class="btn btn-primary pull-right" ng-click="save(task)">Salvar</button>
+    </div>
+
+</form>

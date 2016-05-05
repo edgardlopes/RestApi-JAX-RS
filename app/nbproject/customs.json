@@ -1,0 +1,7 @@
+{
+    "elements": {
+        "ng-view": {},
+        "md-list": {}
+    },
+    "attributes": {}
+}

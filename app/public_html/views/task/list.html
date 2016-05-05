@@ -1,0 +1,48 @@
+<div>
+    <h3>Tarefas</h3>
+    <h4>Usuario: <small>{{user.name}}</small></h4>
+    <h4>E-mail: <small>{{user.email}}</small></h4>
+</div>
+
+<a ng-href="#/usuario/{{user.id}}/novaTarefa" class="btn btn-primary pull-right">Nova Task</a>
+<div class="clearfix"></div>
+<br>
+
+<div class="alert alert-dismissible" ng-class="alertClass" ng-show="showAlert">
+    <button type="button" class="close" ng-click="showAlert=false" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+    </button>
+    {{msg.msg}}
+</div>
+
+<div class="table-responsive">
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Feito</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="task in tasks" >
+                <td>
+                    <a ng-href="#/usuario/{{user.id}}/tarefa/{{task.id}}">
+                        <span class="glyphicon glyphicon-user"></span>
+                        {{task.name}}
+                    </a>
+                </td>
+                <td>
+                    <span class="glyphicon" ng-class="{'glyphicon-ok ': task.done, 'glyphicon-time ': !task.done}"></span>
+                    <button class=" btn btn-xs btn-info" ng-show="!task.done" ng-click="finishTask(task)">Finalizar tarefa</button>
+                </td>
+                <td>
+                    <button ng-click="delete(task)" class="btn btn-xs btn-danger">
+                        <span class="glyphicon glyphicon-trash"></span>
+                    </button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+</div>

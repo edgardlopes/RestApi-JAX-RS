@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" >
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.css">
+    </head>
+    <body ng-app="app" ng-cloak>
+        <style>
+            .container{
+                margin-top: 80px;
+                width: 600px;
+            }
+
+            .table-hover > tbody > tr:hover {
+                background-color: #efefef;
+            }
+
+            .done::after {
+                content: ' Tarefa pronta';
+            }
+
+            .pending::after {
+                content: ' Tarefa pendente';
+            }
+        </style>
+
+
+        <div class="container well">
+            <ng-view>
+            </ng-view>
+        </div>
+
+        <script src="lib/angular/angular.js"></script>
+        <script src="lib/angular-route/angular-route.js"></script>
+
+        <script src="js/index.js"></script>
+        <script src="js/config/value.js"></script>
+        <script src="js/config/commonConfig.js"></script>
+
+        <script src="js/services/userService.js"></script>
+        <script src="js/services/taskService.js"></script>
+
+        <script src="js/controllers/user/usersController.js"></script>
+        <script src="js/controllers/user/createUserController.js"></script>
+        <script src="js/controllers/user/updateUserController.js"></script>
+        
+        <script src='js/controllers/task/tasksController.js'></script>
+        <script src='js/controllers/task/createTaskController.js'></script>
+        <script src='js/controllers/task/updateTaskController.js'></script>
+    
+        <script src="js/directive/uiAlert.js"></script>
+
+        <script src="js/interceptor/apiInterceptor.js"></script>
+        <script src="js/interceptor/auth.js"></script>
+
+    </body>
+</html>

@@ -1,0 +1,23 @@
+<form>
+    <div class="alert" ng-class="alertClass" ng-show="showAlert">
+        {{msg.msg}}
+    </div>
+
+    <input type="text" ng-model="user.name" class="form-control" placeholder="Nome">
+    <br>
+    <input type="text" ng-model="user.email" class="form-control" placeholder="email">
+    <br>
+    <input type="password" ng-hide="update" ng-model="user.password" class="form-control" placeholder="Password">
+    <br>
+    <select ng-model="user.type" class="form-control">
+        <option value="A">Admin</option>
+        <option value="U">Usuario</option>
+    </select>
+    <br><br>
+
+    <div class="btn-group pull-right">
+        <a href="#/usuarios" class="btn btn-default">Voltar</a>
+        <button type="button" class="btn btn-primary pull-right" ng-click="saveUser(user)">Salvar</button>
+    </div>
+
+</form>
