@@ -2,7 +2,7 @@ angular.module('app', ['ngRoute']);
 
 angular.module('app').config(function ($routeProvider) {
     $routeProvider.when('/login', {
-        templateUrl: 'views/users/login.html',
+        templateUrl: 'views/user/login.html',
         controller: 'loginController'
     });
 
@@ -75,7 +75,14 @@ angular.module('app').config(function ($routeProvider) {
             }
         }
     });
+    
+    $routeProvider.when('/404', {
+        templateUrl: 'views/404.html',
+    });
 
+    $routeProvider.when('/error', {
+        templateUrl: 'views/error.html',
+    });
 
     $routeProvider.otherwise({redirectTo: '/login'});
 });

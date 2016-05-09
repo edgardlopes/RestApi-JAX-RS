@@ -26,7 +26,14 @@
 
 
         <div class="container well">
-            <ng-view>
+            <div ng-show="user">
+                <span>Usuario: {{user.name}} <a>Logout</a></span>
+            </div>
+            
+            <div ng-show="loading">
+                Buscando informacoes do servidor, por favor aguarde...
+            </div>
+            <ng-view ng-hide="loading">
             </ng-view>
         </div>
 
@@ -36,22 +43,27 @@
         <script src="js/index.js"></script>
         <script src="js/config/value.js"></script>
         <script src="js/config/commonConfig.js"></script>
+        <script src="js/config/configInterceptor.js"></script>
 
         <script src="js/services/userService.js"></script>
         <script src="js/services/taskService.js"></script>
+        <script src="js/services/auth.js"></script>
+
 
         <script src="js/controllers/user/usersController.js"></script>
         <script src="js/controllers/user/createUserController.js"></script>
         <script src="js/controllers/user/updateUserController.js"></script>
+        <script src="js/controllers/user/loginController.js"></script>
         
         <script src='js/controllers/task/tasksController.js'></script>
         <script src='js/controllers/task/createTaskController.js'></script>
         <script src='js/controllers/task/updateTaskController.js'></script>
     
         <script src="js/directive/uiAlert.js"></script>
-
+        
         <script src="js/interceptor/apiInterceptor.js"></script>
-        <script src="js/interceptor/auth.js"></script>
-
+        <script src="js/interceptor/loadingInterceptor.js"></script>
+        
+        
     </body>
 </html>

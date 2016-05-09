@@ -12,11 +12,6 @@ angular.module('app').controller('tasksController', function ($scope, tasks, use
 				$scope.showAlert = true;
 				$scope.alertClass = 'alert-success';
 				$scope.msg = {msg: 'Tarefa excluida com sucesso.'};
-			})
-			.error(function () {
-				$scope.showAlert = true;
-				$scope.alertClass = 'alert-danger';
-				$scope.msg = {msg: 'OOPS, um erro ocorreu.'};	
 			});
 	};
 
@@ -27,11 +22,6 @@ angular.module('app').controller('tasksController', function ($scope, tasks, use
 				$scope.showAlert = true;
 				$scope.alertClass = 'alert-success';
 				$scope.msg = {msg: 'Tarefa atualizada.'};
-			})
-			.error(function () {
-				$scope.showAlert = true;
-				$scope.alertClass = 'alert-danger';
-				$scope.msg = {msg: 'OOPS, um erro ocorreu.'};	
 			});
 	};
 });

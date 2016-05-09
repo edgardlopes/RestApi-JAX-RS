@@ -9,10 +9,6 @@ angular.module('app').controller('createUserController', function ($scope, userS
                     $scope.msg = {msg: 'Usuario salvo com sucesso.'};
                     delete $scope.user;
                     $scope.alertClass = 'alert-success';
-                })
-                .catch(function (error) {
-                    $scope.showAlert = true;
-                    $scope.msg = {msg: 'OPS... Um erro ocorreu \n' + error};
                 });
     }
 });

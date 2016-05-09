@@ -9,11 +9,6 @@ angular.module('app').controller('updateTaskController', function ($scope, task,
 				$scope.showAlert = true;
 				$scope.alertClass = 'alert-success';
 				$scope.msg = {msg: 'Tarefa salva com sucesso.'};
-			})
-			.error(function (error) {
-				$scope.showAlert = true;
-				$scope.alertClass = 'alert-danger';
-				$scope.msg = {msg: 'OOPS, um erro ocorreu.'};
 			});
 	};
 });

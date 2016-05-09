@@ -11,10 +11,6 @@ angular.module('app').controller('createTaskController', function ($scope, user,
 				$scope.showAlert = true;
 				$scope.alertClass = 'alert-success';
 				$scope.msg = {msg: 'Tarefa salva com sucesso.'};
-			})
-			.error(function () {
-				$scope.showAlert = true;
-				$scope.msg = {msg: 'Um erro ocorreu'};
 			});
 	};
 });
