@@ -8,25 +8,25 @@
 
 <!--    <context-param>
         <param-name>resteasy.resources</param-name>
-        <param-value>com.leucotron.resteasyapi</param-value>
+        <param-value>com.edgard.resteasyapi</param-value>
     </context-param>-->
     <context-param>
         <param-name>javax.ws.rs.core.Application</param-name>
-        <param-value>com.leucotron.resteasyapi.config.JAppConfig</param-value>
+        <param-value>com.edgard.resteasyapi.config.AppConfig</param-value>
     </context-param>
     
     <context-param>
         <param-name>resteasy.providers</param-name>
         <param-value>
-            com.leucotron.resteasyapi.provider.JGsonProvider, 
-            com.leucotron.resteasyapi.interceptor.JSecurityInterceptor
+            com.edgard.resteasyapi.provider.GsonProvider, 
+            com.edgard.resteasyapi.interceptor.SecurityInterceptor
         </param-value>
    
     </context-param>
 
 <!--    <context-param>
         <param-name>resteasy.providers</param-name>
-        <param-value>com.leucotron.resteasyapi.interceptor.JSecurityInterceptor</param-value>
+        <param-value>com.edgard.resteasyapi.interceptor.JSecurityInterceptor</param-value>
     </context-param>    -->
 
     <!-- set this if you map the Resteasy servlet to something other than -->
